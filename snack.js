@@ -25,11 +25,28 @@ function createSlug(stringa) {
     return stringa.toLowerCase();
 }
 
+// Funzione utilizzata nello Snack 3
+function average(arrayNumeri) {
+
+    // Controllo se tutti i valori sono numeri
+    const tuttiNumeri = arrayNumeri.every(numero => typeof numero === "number");
+    if (!tuttiNumeri) {
+        throw new Error("Average vuole solo numeri!");
+    }
+
+    const somma = arrayNumeri.reduce((somma, numero) => {
+        return somma + numero;
+    }, 0);
+
+    return somma / arrayNumeri.length;
+}
+
 /************
     EXPORT
 ************/
 module.exports = {
     getInitials,
-    createSlug
+    createSlug,
+    average
 }
 
