@@ -1,4 +1,3 @@
-
 // Funzione utilizzata nello Snack 1
 function getInitials(nomeCompleto) {
 
