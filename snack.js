@@ -21,6 +21,6 @@ function getInitials(nomeCompleto) {
 }
 
 module.exports = {
-    getInitials,
+    getInitials
 }
 
