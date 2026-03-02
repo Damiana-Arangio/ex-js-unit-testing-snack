@@ -44,12 +44,24 @@ function average(arrayNumeri) {
     return somma / arrayNumeri.length;
 }
 
+function isPalindrome(stringa) {
+
+    // Elimino tutti gli spazi;
+    const stringaSenzaSpazi = stringa.replaceAll(" ", "");
+    
+    // Inverto la stringa
+    const stringaInvertita = stringaSenzaSpazi.split("").reverse().join("");
+
+    return stringaSenzaSpazi === stringaInvertita;
+}
+
 /************
     EXPORT
 ************/
 module.exports = {
     getInitials,
     createSlug,
-    average
+    average,
+    isPalindrome
 }
 

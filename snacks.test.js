@@ -1,7 +1,7 @@
 /************
     IMPORT
 *************/
-const { getInitials, createSlug, average } = require("./snack.js");
+const { getInitials, createSlug, average, isPalindrome } = require("./snack.js");
 
 
 /************
@@ -57,4 +57,15 @@ test("La funzione createSlug sostituisce gli spazi con -.", () => {
     expect(createSlug("Questo è un test")).toBe("questo-è-un-test");
 })
 
+/* 
+    🏆 Snack 5
+    Creare un test che verifichi la seguente descrizione:
+    👉 "La funzione isPalindrome verifica se una stringa è un palindromo."
+ */
+
+test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
+    expect(isPalindrome("anna")).toBe(true)
+    expect(isPalindrome("damiana")).toBe(false)
+    expect(isPalindrome("i topi non avevano nipoti")).toBe(true)
+})
 
