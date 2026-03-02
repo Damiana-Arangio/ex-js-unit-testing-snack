@@ -20,7 +20,16 @@ function getInitials(nomeCompleto) {
     return result;
 }
 
+// Funzione utilizzata nello Snack 2
+function createSlug(stringa) {
+    return stringa.toLowerCase();
+}
+
+/************
+    EXPORT
+************/
 module.exports = {
-    getInitials
+    getInitials,
+    createSlug
 }
 
