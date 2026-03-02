@@ -20,7 +20,7 @@ function getInitials(nomeCompleto) {
     return result;
 }
 
-// Funzione utilizzata nello Snack 2 e 4
+// Funzione utilizzata negli Snack 2-4-6
 function createSlug(stringa) {
 
     if (!stringa) {
@@ -47,6 +47,7 @@ function average(arrayNumeri) {
     return somma / arrayNumeri.length;
 }
 
+// Funzione utilizzata nello Snack 5
 function isPalindrome(stringa) {
 
     // Elimino tutti gli spazi;
@@ -58,6 +59,27 @@ function isPalindrome(stringa) {
     return stringaSenzaSpazi === stringaInvertita;
 }
 
+// Funzione utilizzata nello Snack 7
+function findPostById(posts, id) {
+
+    // Controllo struttura array
+    posts.forEach(post => {
+        if (post.id === undefined || post.title === undefined || post.slug === undefined) {
+            throw new Error("L'array posts non è nel formato corretto.");
+        }
+    });
+
+    // Controllo se l'id è valido
+    if (typeof id !== "number") {
+        throw new Error(id + " non è un id valido");
+    }
+
+    // Ricerca post
+    const postTrovato = posts.find(post => post.id === id);
+
+    return postTrovato || null;
+}
+
 /************
     EXPORT
 ************/
@@ -65,6 +87,7 @@ module.exports = {
     getInitials,
     createSlug,
     average,
-    isPalindrome
+    isPalindrome,
+    findPostById
 }
 
