@@ -23,8 +23,11 @@ function getInitials(nomeCompleto) {
 // Funzione utilizzata nello Snack 2 e 4
 function createSlug(stringa) {
 
-    const stringaMiniscolo = stringa.toLowerCase();
+    if (!stringa) {
+        throw new Error("Stringa non valida!");
+    }
 
+    const stringaMiniscolo = stringa.toLowerCase();
     return stringaMiniscolo.replaceAll(" ", "-");
 }
 
