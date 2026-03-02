@@ -20,9 +20,12 @@ function getInitials(nomeCompleto) {
     return result;
 }
 
-// Funzione utilizzata nello Snack 2
+// Funzione utilizzata nello Snack 2 e 4
 function createSlug(stringa) {
-    return stringa.toLowerCase();
+
+    const stringaMiniscolo = stringa.toLowerCase();
+
+    return stringaMiniscolo.replaceAll(" ", "-");
 }
 
 // Funzione utilizzata nello Snack 3
